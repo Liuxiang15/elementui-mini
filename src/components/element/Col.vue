@@ -1,5 +1,5 @@
 <template>
-  <div :class="['el-col', `el-col-${span}`]" :style="style">
+  <div :class="['el-col', `el-col-${span}`,`el-col-offset-${offset}`]" :style="style">
     <slot></slot>
   </div>
 </template>
@@ -10,6 +10,10 @@ export default {
     span: {
       type: Number,
       default: 24,
+    },
+    offset: {
+      type: Number,
+      default: 0,
     },
   },
   computed: {
@@ -41,5 +45,11 @@ export default {
   .el-col-#{$i} {
     width: $i / 24 * 100%;
   }
+
+  .el-col-offset-#{$i} {
+    margin-left: $i / 24 * 100%;
+  }
+
+
 }
 </style>
