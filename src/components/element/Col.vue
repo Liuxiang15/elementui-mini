@@ -1,5 +1,8 @@
 <template>
-  <div :class="['el-col', `el-col-${span}`,`el-col-offset-${offset}`]" :style="style">
+  <div
+    :class="['el-col', classList]"
+    :style="style"
+  >
     <slot></slot>
   </div>
 </template>
@@ -12,6 +15,14 @@ export default {
       default: 24,
     },
     offset: {
+      type: Number,
+      default: 0,
+    },
+    push: {
+      type: Number,
+      default: 0,
+    },
+    pull: {
       type: Number,
       default: 0,
     },
@@ -32,6 +43,16 @@ export default {
       style.paddingLeft = style.paddingRight = `${this.gutter / 2}px`;
       return style;
     },
+    classList() {
+      const classList = [];
+      const propList = ['span', 'offset', 'push', 'pull'];
+      propList.forEach((prop) => {
+        if (!this[prop]) return;
+        const className = prop === 'span' ? `el-col-${this[prop]}` : `el-col-${prop}-${this[prop]}`;
+        classList.push(className);
+      });
+      return classList;
+    },
   },
 };
 </script>
@@ -49,7 +70,14 @@ export default {
   .el-col-offset-#{$i} {
     margin-left: $i / 24 * 100%;
   }
+  .el-col-push-#{$i} {
+    position: relative;
+    left: $i / 24 * 100%;
+  }
 
-
+  .el-col-pull-#{$i} {
+    position: relative;
+    right: $i / 24 * 100%;
+  }
 }
 </style>
