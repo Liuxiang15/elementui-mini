@@ -1,5 +1,13 @@
 <template>
-  <div class="el-row" :style="style">
+  <div
+    :class="[
+      'el-row',
+      { 'el-row--flex': this.type === 'flex' },
+      this.justify !== 'start' && `is-justify-${justify}`,
+      this.align !== 'top' && `is-align-${align}`,
+    ]"
+    :style="style"
+  >
     <slot></slot>
   </div>
 </template>
@@ -11,6 +19,19 @@ export default {
     gutter: {
       type: Number,
       default: 0,
+    },
+    type: String,
+    justify: {
+      type: String,
+      default: 'start',
+      validator: val => ['start', 'end', 'center', 'space-around', 'space-between'].includes(val),
+
+    },
+    align: {
+      type: String,
+      default: 'top',
+      validator: val => ['top', 'middle', 'bottom'].includes(val),
+
     },
   },
   computed: {
@@ -27,7 +48,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .el-row {
   &::after,
   &::before {
@@ -36,6 +56,40 @@ export default {
   }
   &::after {
     clear: both;
+  }
+
+  &--flex {
+    display: flex;
+    // 清除上面的浮动设置
+    &::after,
+    &::before {
+      display: none;
+    }
+
+    &.is-justify-end {
+      justify-content: flex-end;
+    }
+
+    &.is-justify-center {
+      justify-content: center;
+    }
+
+    &.is-justify-space-between {
+      justify-content: space-between;
+    }
+
+    &.is-justify-space-around {
+      justify-content: space-around;
+    }
+
+    &.is-align-middle {
+      align-items: center;
+    }
+
+    &.is-align-bottom {
+      align-items: flex-end;
+    }
+
   }
 }
 </style>
