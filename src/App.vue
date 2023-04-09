@@ -129,15 +129,8 @@
 </template>
 
 <script>
-import ElRow from '@element/Row.js';
-import ElCol from '@element/Col.js';
-
 export default {
   name: 'app',
-  components: {
-    ElRow,
-    ElCol,
-  },
 };
 </script>
 

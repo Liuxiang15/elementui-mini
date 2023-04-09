@@ -1,4 +1,5 @@
 export default {
+  name: 'ElCol',
   props: {
     tag: {
       type: String,
