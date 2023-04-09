@@ -1,4 +1,16 @@
-.el-row {
+// 混合 mixin .elrow BEM -> b (block)
+$namespace: 'el';
+@mixin b($block){
+    $B: $namespace + '-' + $block;
+
+    @at-root{
+        .#{$B} {
+            @content;
+        }
+    }
+}
+
+@include b(row) {
 
     &::after,
     &::before {
