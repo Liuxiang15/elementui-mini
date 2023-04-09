@@ -27,11 +27,22 @@ $namespace: 'el';
     }
 }
 
+@mixin m($modifier){
+    // 示例：&--flex
+    $selector: &;
+    $currentSelector:$selector + '-' +$modifier;
+
+    @at-root {
+        #{$currentSelector}{
+            @content;
+        }
+    }
+}
 
 @include b(row) {
     @include utils-clearfix;
 
-    &--flex {
+    @include m(flex) {
         display: flex;
 
         // 清除上面的浮动设置
