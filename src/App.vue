@@ -2,7 +2,7 @@
   <div id="app">
     <h1>基础布局</h1>
     <el-row tag="p">
-      <el-col :span="24"
+      <el-col :span="24" tag="p"
         ><div class="grid-content bg-purple-dark"></div
       ></el-col>
     </el-row>
@@ -130,7 +130,7 @@
 
 <script>
 import ElRow from '@element/Row.js';
-import ElCol from '@element/Col.vue';
+import ElCol from '@element/Col.js';
 
 export default {
   name: 'app',
