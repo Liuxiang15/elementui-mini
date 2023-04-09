@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <h1>基础布局</h1>
-    <el-row>
-      <el-col :span="24"
+    <el-row tag="p">
+      <el-col :span="24" tag="p"
         ><div class="grid-content bg-purple-dark"></div
       ></el-col>
     </el-row>
@@ -129,15 +129,8 @@
 </template>
 
 <script>
-import ElRow from '@element/Row.vue';
-import ElCol from '@element/Col.vue';
-
 export default {
   name: 'app',
-  components: {
-    ElRow,
-    ElCol,
-  },
 };
 </script>
 
