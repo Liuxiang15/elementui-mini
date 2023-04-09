@@ -1,5 +1,7 @@
 // 混合 mixin .elrow BEM -> b (block)
 $namespace: 'el';
+$element-separator: '__';
+$modifier-separator: '--';
 @mixin b($block){
     $B: $namespace + '-' + $block;
 
@@ -30,7 +32,7 @@ $namespace: 'el';
 @mixin m($modifier){
     // 示例：&--flex
     $selector: &;
-    $currentSelector:$selector + '-' +$modifier;
+    $currentSelector:$selector + $modifier-separator +$modifier;
 
     @at-root {
         #{$currentSelector}{
