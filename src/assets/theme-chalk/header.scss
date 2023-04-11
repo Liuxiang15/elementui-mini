@@ -2,7 +2,7 @@
 
 @include b(header) {
     box-sizing: border-box;
-    padding: 0 20px;
+    padding:$--header-padding;
     // flex-shrink:flex 元素的收缩规则，默认值是1
     flex-shrink: 0;
 }
