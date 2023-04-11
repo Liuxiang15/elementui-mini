@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: row;
     box-sizing: border-box;
+    flex: 1;
 
     // 当有is-vertical的class后
     @include when(vertical) {
