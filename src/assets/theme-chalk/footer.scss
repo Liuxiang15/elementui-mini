@@ -1,5 +1,8 @@
 @import "./mixins/mixins.scss";
 
 @include b(footer) {
-
+    box-sizing: border-box;
+    padding: $--footer-padding;
+    // flex-shrink:flex 元素的收缩规则，默认值是1
+    flex-shrink: 0;
 }
