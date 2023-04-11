@@ -1,0 +1,11 @@
+@import './mixins/mixins.scss';
+
+@include b(container){
+    display: flex;
+    flex-direction: row;
+
+    // 当有is-vertical的class后
+    @include when(vertical) {
+        flex-direction: column;
+    }
+}
