@@ -40,7 +40,8 @@ export default {
       if (!this.gutter) {
         return style;
       }
-      style.paddingLeft = style.paddingRight = `${this.gutter / 2}px`;
+      style.paddingRight = `${this.gutter / 2}px`;
+      style.paddingLeft = style.paddingRight;
       return style;
     },
     classList() {

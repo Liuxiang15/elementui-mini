@@ -1,4 +1,4 @@
-import Row from '@element/row';
+import Row from '@element/Row';
 import Col from '@element/Col';
 import { shallowMount } from '@vue/test-utils';
 
