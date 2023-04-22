@@ -1,0 +1,11 @@
+@import './mixins/mixins.scss';
+
+@include b(button){
+    cursor: pointer;
+  outline: none;
+  margin: 0;
+
+  & + & {
+    margin-left: 10px;
+  }
+}

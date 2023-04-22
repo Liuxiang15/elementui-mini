@@ -1,5 +1,5 @@
 <template>
-  <button>
+  <button class="el-button">
     <slot></slot>
   </button>
 </template>
