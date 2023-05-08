@@ -34,6 +34,18 @@
     border-color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
     color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
   }
+  @include when(plain) {
+    &:hover {
+      background-color: $--color-white;
+      border-color: $--color-primary;
+      color: $--color-primary;
+    }
+
+    &:active {
+      border-color: mix($--color-black, $--color-primary, 10%);
+      color: mix($--color-black, $--color-primary, 10%);
+    }
+  }
 
   @include m(primary) {
     @include button-variant($--button-primary-background-color, $--button-primary-border-color, $--button-primary-font-color);
