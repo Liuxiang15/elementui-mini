@@ -3,7 +3,10 @@
     class="el-button"
     :class="[
       type ? `el-button--${type}` : '',
-       plain ? 'is-plain' : '',
+      {
+        'is-plain': plain,
+        'is-round': round,
+      },
     ]"
   >
     <slot></slot>
@@ -16,6 +19,7 @@ export default {
   props: {
     type: String,
     plain: Boolean,
+    round: Boolean,
   },
 };
 </script>

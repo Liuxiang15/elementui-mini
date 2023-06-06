@@ -47,6 +47,12 @@
     }
   }
 
+  @include when(round) {
+    border-radius: 20px;
+    padding-left: 23px;
+    padding-right: 23px;
+  }
+
   @include m(primary) {
     @include button-variant($--button-primary-background-color, $--button-primary-border-color, $--button-primary-font-color);
   }
