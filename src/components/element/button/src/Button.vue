@@ -6,9 +6,11 @@
       {
         'is-plain': plain,
         'is-round': round,
+        'is-circle': circle,
       },
     ]"
   >
+   <i :class="icon" v-if="icon" />
     <slot></slot>
   </button>
 </template>
@@ -20,6 +22,8 @@ export default {
     type: String,
     plain: Boolean,
     round: Boolean,
+    circle: Boolean,
+    icon: String,
   },
 };
 </script>

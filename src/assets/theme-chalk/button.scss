@@ -8,6 +8,8 @@
   outline: none;
   margin: 0;
   transition-duration: .1s;
+  line-height: 1;
+  // 让圆形按钮竖直居中
 
   border: $--border-base;
   background-color: $--button-default-background-color;
@@ -45,6 +47,11 @@
       border-color: mix($--color-black, $--color-primary, 10%);
       color: mix($--color-black, $--color-primary, 10%);
     }
+  }
+
+  @include when(circle) {
+    border-radius: 50%;
+    padding: $--button-padding-vertical;
   }
 
   @include when(round) {
