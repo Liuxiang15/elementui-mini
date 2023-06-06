@@ -7,6 +7,7 @@
         'is-plain': plain,
         'is-round': round,
         'is-circle': circle,
+        'is-disabled': disabled,
       },
     ]"
   >
@@ -24,6 +25,7 @@ export default {
     round: Boolean,
     circle: Boolean,
     icon: String,
+    disabled: Boolean,
   },
 };
 </script>
