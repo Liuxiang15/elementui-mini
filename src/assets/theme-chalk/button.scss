@@ -36,6 +36,13 @@
     border-color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
     color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
   }
+  // 按钮中类名包含el-icon-的元素的兄弟span元素设置左外边距
+  [class *= 'el-icon-']{
+    & + span {
+      margin-left: 5px;
+    }
+  }
+
   @include when(plain) {
     &:hover {
       background-color: $--color-white;
