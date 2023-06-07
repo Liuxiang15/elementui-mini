@@ -62,6 +62,9 @@
       ></el-button>
       <el-button type="primary"><i class="el-icon-upload el-icon--left"></i>上传</el-button>
     </el-row>
+    <el-row>
+       <el-button type="primary" :loading="true">加载中</el-button>
+    </el-row>
   </div>
 </template>
 

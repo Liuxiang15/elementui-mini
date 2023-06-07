@@ -11,7 +11,9 @@
       },
     ]"
   >
-   <i :class="icon" v-if="icon" />
+  <!-- icon和loading不同时存在 -->
+   <i :class="icon" v-if="icon && !loading" />
+   <i class="el-icon-loading" v-if="loading" />
     <span v-if="$slots.default">
       <slot></slot>
     </span>
@@ -28,6 +30,7 @@ export default {
     circle: Boolean,
     icon: String,
     disabled: Boolean,
+    loading: Boolean,
   },
 };
 </script>
