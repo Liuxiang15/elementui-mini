@@ -15,10 +15,10 @@
   background-color: $--button-default-background-color;
   border-color: $--button-default-border-color;
   color: $--button-default-font-color;
-  padding: $--button-padding-vertical $--button-padding-horizontal;
-  font-size: $--button-font-size;
   font-weight: $--button-font-weight;
-  border-radius: $--button-border-radius;
+
+  @include button-size($--button-padding-vertical, $--button-padding-horizontal, $--button-font-size, $--button-border-radius);
+  
 
   @include utils-user-select(none);
 
@@ -121,5 +121,17 @@
     &.is-disabled:hover {
       border-color: transparent;
     }
+  }
+
+  @include m(medium) {
+    @include button-size($--button-medium-padding-vertical, $--button-medium-padding-horizontal, $--button-medium-font-size, $--button-medium-border-radius);
+  }
+  
+  @include m(small) {
+    @include button-size($--button-small-padding-vertical, $--button-small-padding-horizontal, $--button-medium-font-size, $--button-small-border-radius);
+  }
+  
+  @include m(mini) {
+    @include button-size($--button-mini-padding-vertical, $--button-mini-padding-horizontal, $--button-medium-font-size, $--button-mini-border-radius);
   }
 }

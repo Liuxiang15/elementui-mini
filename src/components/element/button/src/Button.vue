@@ -3,6 +3,7 @@
     class="el-button"
     :class="[
       type ? `el-button--${type}` : '',
+      size ? `el-button--${size}` : '',
       {
         'is-plain': plain,
         'is-round': round,
@@ -31,6 +32,7 @@ export default {
     icon: String,
     disabled: Boolean,
     loading: Boolean,
+    size: String,
   },
 };
 </script>

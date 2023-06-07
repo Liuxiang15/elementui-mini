@@ -65,6 +65,24 @@
     <el-row>
        <el-button type="primary" :loading="true">加载中</el-button>
     </el-row>
+    <el-row>
+      <el-button>默认按钮</el-button>
+      <el-button size="medium">中等按钮</el-button>
+      <el-button size="small">小型按钮</el-button>
+      <el-button size="mini">超小按钮</el-button>
+    </el-row>
+    <el-row>
+      <el-button round>默认按钮</el-button>
+      <el-button size="medium" round>中等按钮</el-button>
+      <el-button size="small" round>小型按钮</el-button>
+      <el-button size="mini" round>超小按钮</el-button>
+    </el-row>
+    <el-row>
+      <el-button type="primary" icon="el-icon-edit" circle ></el-button>
+      <el-button type="success" icon="el-icon-check" circle size="medium"></el-button>
+      <el-button type="info" icon="el-icon-message" circle size="small"></el-button>
+      <el-button type="warning" icon="el-icon-star-off" circle size="mini"></el-button>
+    </el-row>
   </div>
 </template>
 
