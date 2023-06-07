@@ -62,6 +62,7 @@
 
   @include when(disabled) {
     &,
+    &:hover,
     &.is-plain {
       cursor: not-allowed;
       background-color: $--button-disabled-background-color;
@@ -88,5 +89,30 @@
   
   @include m(danger) {
     @include button-variant($--button-danger-background-color, $--button-danger-border-color, $--button-danger-font-color);
+  }
+
+  @include m(text) {
+    padding-left: 0;
+    padding-right: 0;
+    border-color: transparent;
+    background-color: transparent;
+    color: $--color-primary;
+
+    &:hover {
+      background-color: transparent;
+      border-color: transparent;
+      color: mix($--color-white, $--color-primary, $--button-hover-tint-percent);
+    }
+
+    &:active {
+      background-color: transparent;
+      border-color: transparent;
+      color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+    }
+
+    &.is-disabled,
+    &.is-disabled:hover {
+      border-color: transparent;
+    }
   }
 }
