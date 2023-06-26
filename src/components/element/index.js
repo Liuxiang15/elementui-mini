@@ -7,9 +7,10 @@ import Footer from '@element/footer';
 import Aside from '@element/aside';
 import Icon from '@element/icon';
 import Button from '@element/button';
+import ButtonGroup from '@element/button-group';
 
 
-const components = [Row, Col, Container, Main, Header, Footer, Aside, Icon, Button];
+const components = [Row, Col, Container, Main, Header, Footer, Aside, Icon, Button, ButtonGroup];
 
 const install = (Vue) => {
   components.forEach((component) => {
@@ -23,5 +24,5 @@ export default {
 };
 
 export {
-  Row, Col, Container, Main, Header, Footer, Aside, Icon, Button,
+  Row, Col, Container, Main, Header, Footer, Aside, Icon, Button, ButtonGroup,
 };
