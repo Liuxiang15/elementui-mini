@@ -1,0 +1,54 @@
+@import "./mixins/mixins.scss";
+@import "./common/var.scss";
+
+@include b(button-group) {
+  display: inline-block;
+  .el-button {
+    margin-left: 0;
+
+    // border-radius
+    &:first-child {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &:last-child {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    // 不是首尾子元素
+    &:not(:first-child):not(:last-child) {
+      border-radius: 0;
+    }
+    // 只有一个子元素
+    &:first-child:last-child {
+      border-radius: $--button-border-radius;
+
+      &.is-round {
+        border-radius: 20px;
+      }
+
+      &.is-circle {
+        border-radius: 50%;
+      }
+    }
+    // border
+    &:first-child {
+      border-right-color: rgba($--color-white, .5);
+    }
+
+    &:last-child {
+      border-left-color: rgba($--color-white, .5);
+    }
+
+    &:not(:first-child):not(:last-child) {
+      border-right-color: rgba($--color-white, .5);
+      border-left-color: rgba($--color-white, .5);
+    }
+    // 保证中间只有一条细线，有两条的话重叠
+    &:not(:last-child) {
+      margin-right: -1px;
+    }
+
+  }
+}
