@@ -1,6 +1,7 @@
 <template>
   <button
     :autofocus="autofocus"
+    :type="nativeType"
     class="el-button"
     :class="[
       type ? `el-button--${type}` : '',
@@ -35,6 +36,10 @@ export default {
     loading: Boolean,
     size: String,
     autofocus: Boolean,
+    nativeType: {
+      type: String,
+      default: 'button',
+    },
   },
 };
 </script>
