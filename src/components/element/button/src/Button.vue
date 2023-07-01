@@ -2,6 +2,7 @@
   <button
     :autofocus="autofocus"
     :type="nativeType"
+    @click="e => $emit('click', e)"
     class="el-button"
     :class="[
       type ? `el-button--${type}` : '',
