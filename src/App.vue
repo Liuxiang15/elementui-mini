@@ -3,7 +3,7 @@
     <!-- <RowTest /> -->
     <!-- <ContainerTest/> -->
     <!-- <IconTest /> -->
-    <!-- <ButtonTest /> -->
+    <ButtonTest />
     <ButtonGroupTest />
   </div>
 </template>
@@ -12,8 +12,8 @@
 // import RowTest from '@element/Row/test';
 // import ContainerTest from '@element/container/test';
 // import IconTest from '@element/icon/test.vue';
-// import ButtonTest from '@element/button/test.vue';
-import ButtonGroupTest from '@element/button-group/test.vue';
+import ButtonTest from '@element/button/test.vue';
+// import ButtonGroupTest from '@element/button-group/test.vue';
 
 export default {
   name: 'app',
@@ -21,8 +21,8 @@ export default {
     // RowTest,
     // ContainerTest,
     // IconTest,
-    // ButtonTest,
-    ButtonGroupTest,
+    ButtonTest,
+    // ButtonGroupTest,
   },
 };
 </script>

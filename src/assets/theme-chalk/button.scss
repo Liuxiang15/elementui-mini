@@ -26,7 +26,8 @@
     margin-left: 10px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $--color-primary-light-9;
     border-color: $--color-primary-light-7;
     color: $--color-primary;
@@ -44,7 +45,8 @@
   }
 
   @include when(plain) {
-    &:hover {
+    &:hover,
+  &:focus {
       background-color: $--color-white;
       border-color: $--color-primary;
       color: $--color-primary;
@@ -70,6 +72,7 @@
   @include when(disabled) {
     &,
     &:hover,
+  &:focus,
     &.is-plain {
       cursor: not-allowed;
       background-color: $--button-disabled-background-color;
@@ -105,7 +108,8 @@
     background-color: transparent;
     color: $--color-primary;
 
-    &:hover {
+    &:hover,
+  &:focus {
       background-color: transparent;
       border-color: transparent;
       color: mix($--color-white, $--color-primary, $--button-hover-tint-percent);

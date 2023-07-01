@@ -1,5 +1,6 @@
 <template>
   <button
+    :autofocus="autofocus"
     class="el-button"
     :class="[
       type ? `el-button--${type}` : '',
@@ -33,6 +34,7 @@ export default {
     disabled: Boolean,
     loading: Boolean,
     size: String,
+    autofocus: Boolean,
   },
 };
 </script>
