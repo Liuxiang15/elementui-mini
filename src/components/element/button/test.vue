@@ -60,10 +60,12 @@
       <el-button type="primary"
         >上传<i class="el-icon-upload el-icon--right"></i
       ></el-button>
-      <el-button type="primary"><i class="el-icon-upload el-icon--left"></i>上传</el-button>
+      <el-button type="primary"
+        ><i class="el-icon-upload el-icon--left"></i>上传</el-button
+      >
     </el-row>
     <el-row>
-       <el-button type="primary" :loading="true">加载中</el-button>
+      <el-button type="primary" :loading="true">加载中</el-button>
     </el-row>
     <el-row>
       <el-button>默认按钮</el-button>
@@ -78,10 +80,31 @@
       <el-button size="mini" round>超小按钮</el-button>
     </el-row>
     <el-row>
-      <el-button type="primary" icon="el-icon-edit" circle ></el-button>
-      <el-button type="success" icon="el-icon-check" circle size="medium"></el-button>
-      <el-button type="info" icon="el-icon-message" circle size="small"></el-button>
-      <el-button type="warning" icon="el-icon-star-off" circle size="mini"></el-button>
+      <el-button type="primary" icon="el-icon-edit" circle></el-button>
+      <el-button
+        type="success"
+        icon="el-icon-check"
+        circle
+        size="medium"
+      ></el-button>
+      <el-button
+        type="info"
+        icon="el-icon-message"
+        circle
+        size="small"
+      ></el-button>
+      <el-button
+        type="warning"
+        icon="el-icon-star-off"
+        circle
+        size="mini"
+      ></el-button>
+    </el-row>
+    <el-row>
+      <el-button autofocus type="primary">按钮</el-button>
+      <el-button @click="handleClick" native-type="submit" type="primary"
+        >按钮</el-button
+      >
     </el-row>
   </div>
 </template>
@@ -89,6 +112,11 @@
 <script>
 
 export default {
+  methods: {
+    handleClick(e) {
+      console.log('click', e);
+    },
+  },
 
 };
 </script>
